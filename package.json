@@ -1,0 +1,16 @@
+{
+  "name": "requirements-receiver",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "跨企业需求交换中引用对象与只读证据的定向接收",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test --test-concurrency=1",
+    "demo": "node scripts/demo.mjs",
+    "start": "node scripts/start.mjs"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "A",
+  "resources": {
+    "/exchange/customer-A": {
+      "body": {
+        "customer": "A",
+        "objects": [
+          {
+            "id": "R1",
+            "href": "/exchange/customer-A/records/R1"
+          }
+        ]
+      }
+    },
+    "/exchange/customer-A/records/R1": {
+      "body": {
+        "object": "R1",
+        "customer": "A",
+        "type": "requirement",
+        "heading": "供电要求",
+        "text": "额定供电符合合同条件",
+        "editable": true
+      }
+    },
+    "/exchange/customer-A/relations/R1": {
+      "body": {
+        "view": "V1",
+        "relations": [
+          {
+            "target": "T1",
+            "customer": "A",
+            "permission": "evidence-only"
+          }
+        ],
+        "definition": {
+          "enum": "E",
+          "version": "1"
+        }
+      }
+    }
+  },
+  "portal": {
+    "identity": "object",
+    "records": {
+      "R1": {
+        "object": "R1",
+        "customer": "A",
+        "type": "requirement",
+        "heading": "供电要求",
+        "text": "额定供电符合合同条件",
+        "editable": true
+      }
+    },
+    "version": 1
+  }
+}
