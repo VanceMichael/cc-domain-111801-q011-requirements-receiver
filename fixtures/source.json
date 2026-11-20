@@ -29,13 +29,40 @@
           {
             "target": "T1",
             "customer": "A",
-            "permission": "evidence-only"
+            "permission": "evidence-only",
+            "href": "/exchange/customer-A/views/V1/objects/T1"
           }
         ],
         "definition": {
           "enum": "E",
           "version": "1"
         }
+      }
+    },
+    "/exchange/customer-A/definitions/E": {
+      "body": {
+        "enum": "E",
+        "version": "1",
+        "values": [
+          {
+            "value": "evidence-only",
+            "label": "只读证据"
+          },
+          {
+            "value": "editable-return",
+            "label": "可回传编辑"
+          }
+        ]
+      }
+    },
+    "/exchange/customer-A/views/V1/objects/T1": {
+      "body": {
+        "object": "T1",
+        "customer": "A",
+        "type": "evidence",
+        "heading": "供电试验报告",
+        "text": "型式试验结论留档备查",
+        "editable": false
       }
     }
   },

@@ -1,6 +1,6 @@
 # RequirementsReceiver
 
-RequirementsReceiver 为业务资料员提供视图引用领取与原文保管，已支持来源目录预览、直接记录领取、客户对象身份、编辑权限、需求与证据类型以及按业务范围形成收件记录。原文与领域收件结论分开保存，便于复查来源内容。
+RequirementsReceiver 为业务资料员提供视图引用领取与原文保管，已支持来源目录预览、直接记录领取、客户对象身份、编辑权限、需求与证据类型以及按业务范围形成收件记录。引用对象沿来源声明的关系定向收齐：未获准看的目标留下带来源的未解析关系，视图开放后可补收且不重复产生需求对象；枚举定义先更新时标注定义缺口，不按显示文字硬转。引用目标只作只读依据，与可回传修改清单分开保存，便于复查来源内容。
 
 ## 环境与运行
 
@@ -26,4 +26,4 @@ docker run --rm --network none requirements-receiver:local
 
 ## 代码与来源约定
 
-`src/source.mjs` 负责来源目录与原文身份，`src/interpret.mjs` 解释当前领域记录，`src/receiving.mjs` 决定选定范围内的收件结果。`src/archive.mjs` 提供原文保管及收据落库，`src/app.mjs` 连接日常业务，`fixtures/` 与 `src/fixture-source.mjs` 提供可独立复查的本地合作源。详细字段与来源声明见 `docs/source-contract.md`。
+`src/source.mjs` 负责来源目录、对象关系与枚举定义入口及原文身份，`src/interpret.mjs` 解释当前领域记录、关系资料与枚举定义，`src/receiving.mjs` 决定选定范围内的收件结果、只读证据判定与定义相容性。`src/archive.mjs` 提供原文保管及收据、关系观察落库，`src/app.mjs` 连接日常业务并产出交付审阅的结果，`fixtures/` 与 `src/fixture-source.mjs` 提供可独立复查的本地合作源。详细字段与来源声明见 `docs/source-contract.md`。
